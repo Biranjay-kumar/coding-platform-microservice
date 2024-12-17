@@ -1,0 +1,37 @@
+{
+  "name": "problemevaluatorservice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx tsc",
+    "watch": "npx tsc -w",
+    "prestart": "npm run build",
+    "start": "npx nodemon dist/index.js",
+    "dev": "npx concurrently --kill-others \"npm run watch\"  \"npm run start\"  "
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "eslint-plugin-simple-import-sort": "^12.1.0",
+    "typescript": "^5.4.5",
+    "typescript-eslint": "^7.8.0"
+  },
+  "dependencies": {
+    "@bull-board/express": "^5.17.1",
+    "@types/dockerode": "^3.3.29",
+    "@types/ioredis": "^5.0.0",
+    "@typescript-eslint/eslint-plugin": "^7.8.0",
+    "@typescript-eslint/parser": "^7.8.0",
+    "bullmq": "^5.7.8",
+    "concurrently": "^8.2.2",
+    "dockerode": "^4.0.2",
+    "dotenv": "^16.4.5",
+    "eslint": "^9.2.0",
+    "express": "^4.19.2",
+    "ioredis": "^5.4.1",
+    "zod": "^3.23.8"
+  }
+}
